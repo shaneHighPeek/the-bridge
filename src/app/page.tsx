@@ -14,19 +14,19 @@ export default function Home() {
     <div className="flex h-screen bg-slate-950 text-slate-50 overflow-hidden">
       <Sidebar />
       
-      <main className="flex-1 flex flex-col min-w-0 bg-slate-950 overflow-y-auto">
-        <header className="h-16 border-b border-slate-900 px-8 flex items-center justify-between bg-slate-950/50 backdrop-blur-sm sticky top-0 z-10">
-          <div>
+      <main className="flex-1 flex flex-col min-w-0 bg-slate-950 overflow-y-auto pt-16 lg:pt-0">
+        <header className="h-16 border-b border-slate-900 px-4 md:px-8 flex items-center justify-between bg-slate-950/50 backdrop-blur-sm sticky top-0 z-10">
+          <div className="pl-12 lg:pl-0">
             <h1 className="text-lg font-semibold text-slate-200 uppercase tracking-widest text-xs">The Bridge</h1>
             <p className="text-[10px] text-slate-500 uppercase tracking-widest font-bold">Command Centre for Shane & Lori</p>
           </div>
         </header>
 
-        <div className="p-8 space-y-12 max-w-5xl">
+        <div className="p-4 md:p-8 space-y-12 max-w-5xl">
           {/* Active Projects */}
           <section className="space-y-6">
             <h2 className="text-sm font-bold border-l-4 border-blue-500 pl-4 uppercase tracking-widest text-slate-400">Active Projects</h2>
-            <div className="grid gap-4 md:grid-cols-2">
+            <div className="grid gap-4 sm:grid-cols-2">
               {projects.map((p) => (
                 <div key={p.name} className="bg-slate-900/40 border border-slate-800/60 p-5 rounded-xl hover:border-slate-700 transition-colors group">
                   <div className="flex justify-between items-start">
@@ -46,7 +46,7 @@ export default function Home() {
           {/* Analytical Feed */}
           <section className="space-y-6">
             <h2 className="text-sm font-bold border-l-4 border-orange-500 pl-4 uppercase tracking-widest text-slate-400">What's Happened (Last 24h)</h2>
-            <div className="bg-slate-900/30 border border-slate-800/60 rounded-xl p-6">
+            <div className="bg-slate-900/30 border border-slate-800/60 rounded-xl p-6 text-sm md:text-base">
               <ul className="space-y-4">
                 {[
                   'Initialized **The Bridge** infrastructure on Vercel & GitHub.',
@@ -64,9 +64,9 @@ export default function Home() {
           </section>
 
           {/* Next Moves */}
-          <section className="space-y-6">
+          <section className="space-y-6 pb-8">
             <h2 className="text-sm font-bold border-l-4 border-green-500 pl-4 uppercase tracking-widest text-slate-400">What's Next</h2>
-            <div className="grid gap-3">
+            <div className="grid gap-3 text-sm">
               {[
                 'Connect **Google Calendar API** to sync schedules.',
                 'Run **SEQ Triangle Harvest** for Sunshine Coast data.',
@@ -84,7 +84,9 @@ export default function Home() {
         </div>
       </main>
 
-      <ActivityFeed />
+      <div className="hidden xl:block">
+        <ActivityFeed />
+      </div>
     </div>
   );
 }
