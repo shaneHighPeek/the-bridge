@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #202124;
+  --foreground: #e8eaed;
 }
 
 @theme inline {
@@ -10,13 +10,12 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  
+  /* Overriding Tailwind slate to match Google Dark colors */
+  --color-slate-950: #202124;
+  --color-slate-900: #292a2d;
+  --color-slate-800: #3c4043;
+  --color-slate-700: #5f6368;
 }
 
 body {
