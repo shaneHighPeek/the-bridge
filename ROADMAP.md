@@ -1,39 +1,45 @@
-# THE BRIDGE: Roadmap & Scorecard
+# jOY Events: Strategic Roadmap
 
-**Status:** Initializing Phase 1
-**Lead:** Klor (Technical Lead)
-**Stakeholders:** Shane (The Captain), Lori (Analytical Lead)
-
----
-
-## Phase 1: The Foundation (Logic & Data)
-*Focus: Creating the single source of truth.*
-- [x] Initialize Repository (DONE)
-- [ ] Define Master Project Registry (IN PROGRESS)
-- [ ] Historical Log Scraper (Extracting "What's Happened" from chats/logs)
-- [ ] "What's Next" Engine (Parsing project roadmaps)
-
-## Phase 2: The Interface (Vercel & Next.js)
-*Focus: Making it visible and beautiful.*
-- [ ] Next.js Boilerplate & Vercel Deployment
-- [ ] Real-time Markdown Sync (Dashboard reads from GitHub)
-- [ ] Mobile-Responsive View (For Shane & Lori's phones)
-
-## Phase 3: Integration (Calendar & CRM)
-*Focus: Connecting the ecosystem.*
-- [ ] Google/Workspace Calendar API Bridge
-- [ ] High Peek Pro (HighLevel) Client Update Automator
-- [ ] Daily "Analytical Brief" for Lori (Telegram/Dashboard)
-
-## Phase 4: Expansion (Intelligence)
-*Focus: Proactive management.*
-- [ ] Project Velocity Tracking
-- [ ] Blocker Detection & Alerts
-- [ ] 2033 Olympic Goal Alignment Tracking
+**Overall Status:** Phase 1 (Ingestion & Vision)
+**Stakeholders:** Shane (Architect/Design), Lori (Analytical), Klor (Doer)
 
 ---
 
-### Simple Next Steps
-1. **Connect Calendar:** Awaiting Shane's return to setup Google/Workspace access.
-2. **Deploy Dashboard:** Initialize Next.js app and link to Vercel.
-3. **Registry Sync:** Consolidate all projects from `openclaw-memory` into the Bridge.
+## 🏗️ Backend Roadmap (The "Brain" & "Vacuum")
+*Focus: Data integrity, high-trust curation, and velocity tracking.*
+
+### Phase 1: Ingestion Engine [ACTIVE]
+- [x] Brisbane City Council API Integration (DONE)
+- [x] Ticketmaster Discovery API Integration (DONE)
+- [ ] Gold Coast (GCCC) Scraper (NEXT)
+- [ ] Sunshine Coast (SCCC/Noosa) Scraper (NEXT)
+- [ ] Instagram/TikTok Venue Pulse (Hype Meter)
+
+### Phase 2: The jOY Bar AI
+- [x] Vibe-Tagging Logic (DONE)
+- [x] Morphic UI Theme Mapping (DONE)
+- [ ] Live Weather Context Filter
+- [ ] 2032 Olympic Venue Heritage Tagging
+
+---
+
+## 🎨 Frontend Roadmap (The "Vibe" & "Experience")
+*Focus: Visually stunning discovery, design-first, morphic interface.*
+
+### Phase 1: Structural Visibility [ACTIVE]
+- [x] Initialize Next.js Repository (DONE)
+- [ ] Design System Foundation (Shane-Led Design Specs)
+- [ ] Regional Vibe Selectors (BNE / GC / SC)
+- [ ] First Morphic Skin Prototype (Stadium vs Sunset)
+
+### Phase 2: Dynamic Experience
+- [ ] Interactive Heat Meter (Visual Glow)
+- [ ] Spotify Artist Preview Integration
+- [ ] Legend Points & Gamification UI
+
+---
+
+## 🌉 Bridge Network Status
+- **jOY Web:** [Deploying...]
+- **jOY Engine:** Active (Vacuuming)
+- **Design Intent:** High-Visual / Stunning Focus
