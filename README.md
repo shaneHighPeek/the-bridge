@@ -10,4 +10,4 @@ The centralized operating system for Shane & Lori.
 ## Tech Stack (Planned)
 - **Frontend:** Next.js (Hosted on Vercel)
 - **Data Source:** GitHub (Markdown Roadmaps & Agent Logs)
-- **Integrations:** Google/Microsoft Calendar, HighPeak Pro (CRM)
+- **Integrations:** Google/Microsoft Calendar, High Peek Pro (CRM)

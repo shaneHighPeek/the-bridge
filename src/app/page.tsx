@@ -70,7 +70,7 @@ export default function Home() {
               {[
                 'Connect **Google Calendar API** to sync schedules.',
                 'Run **SEQ Triangle Harvest** for Sunshine Coast data.',
-                'Map **HighPeak Pro** integration for client updates.'
+                'Map **High Peek Pro** integration for client updates.'
               ].map((item, i) => (
                 <div key={i} className="flex items-center space-x-4 bg-slate-900/20 border border-slate-800/40 p-4 rounded-xl hover:bg-slate-900/40 transition-colors">
                   <div className="h-4 w-4 border-2 border-slate-700 rounded-sm flex-shrink-0"></div>

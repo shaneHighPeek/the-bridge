@@ -22,7 +22,7 @@
 ## Phase 3: Integration (Calendar & CRM)
 *Focus: Connecting the ecosystem.*
 - [ ] Google/Workspace Calendar API Bridge
-- [ ] HighPeak Pro (HighLevel) Client Update Automator
+- [ ] High Peek Pro (HighLevel) Client Update Automator
 - [ ] Daily "Analytical Brief" for Lori (Telegram/Dashboard)
 
 ## Phase 4: Expansion (Intelligence)

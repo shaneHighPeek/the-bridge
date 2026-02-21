@@ -4,7 +4,7 @@ const tasks = {
   backlog: [
     { id: 1, title: 'Olympic Hub: Mapping SC Venues', project: 'jOY Events', days: '2d ago', color: 'orange' },
     { id: 2, title: 'Weekly Vibe Forecast Script', project: 'Content', days: '1d ago', color: 'blue' },
-    { id: 3, title: 'HighPeak API Endpoints Mapping', project: 'Infra', days: '4h ago', color: 'purple' },
+    { id: 3, title: 'High Peek Pro API Endpoints Mapping', project: 'Infra', days: '4h ago', color: 'purple' },
   ],
   inProgress: [
     { id: 4, title: 'Bridge Dashboard Facelift', project: 'The Bridge', days: 'Just now', color: 'blue' },

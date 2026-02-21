@@ -10,7 +10,7 @@ export async function GET() {
       { id: 'r3', summary: 'Morning Analytical Brief', start: '2026-02-22T07:30:00+10:00', type: 'Communication', frequency: 'Daily', next_run: 'Completed' },
       { id: 'r4', summary: 'Social Pulse: Hype Meter Sync', start: '2026-02-22T10:00:00+10:00', type: 'jOY', frequency: 'Every 4 hours', next_run: 'In 4 hours' },
       { id: 'r5', summary: 'Vibe Forecast Generator', start: '2026-02-23T16:00:00+10:00', type: 'Content', frequency: 'Weekly', next_run: 'In 1 day' },
-      { id: 'r6', summary: 'HighPeak Pro Client Sync', start: '2026-02-24T09:00:00+10:00', type: 'CRM', frequency: 'Weekly', next_run: 'In 2 days' },
+      { id: 'r6', summary: 'High Peek Pro Client Sync', start: '2026-02-24T09:00:00+10:00', type: 'CRM', frequency: 'Weekly', next_run: 'In 2 days' },
       { id: 'r7', summary: 'Olympic Venue Status Audit', start: '2026-02-26T11:00:00+10:00', type: 'Strategic', frequency: 'Weekly', next_run: 'In 4 days' },
     ];
 
