@@ -8,10 +8,14 @@ jOY Events is a **High-Trust Discovery Engine**. Its mission is to solve the "Pa
 
 ## 2. Product Architecture
 ### 2.1 The Ingestion Engine (The "Vacuum")
-- **Primary API Connectors:** Eventbrite, Humanitix, Ticketek.
-- **Surface Scrapers:** BCC/GCCC Council pages, Concrete Playground, Urban List, niche suburb blogs.
-- **Social Listeners:** Monitoring "Vibe-Leader" social accounts for pop-ups.
-- **Direct Submission:** Zero-friction portal for local organizers.
+- **Primary API Connectors:** 
+    - **Ticketek:** Premier Australian source for major stadium/sport events.
+    - **Bandsintown:** Global lead for music/gig discovery.
+    - **Ticketmaster:** Core partner for international tours and theater.
+    - **Eventbrite:** The primary hub for community and niche SEQ events.
+    - **Humanitix:** High-trust, social-impact platform for unique local events.
+    - **Facebook Events:** Critical "Social Listener" for grass-roots and venue-specific pop-ups.
+- **Surface Scrapers:** BCC/GCCC/SCCC/Noosa Council pages, Concrete Playground, Urban List.
 
 ### 2.2 The AI Cleaning Layer (The "Brain")
 - **Intelligent De-duplication:** LLM-powered merging of duplicate listings from multiple sources.
