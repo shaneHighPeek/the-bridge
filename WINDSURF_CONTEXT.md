@@ -1,40 +1,39 @@
 # jOY Events: System Architecture & Windsurf Context
 
-## 1. Overview
-This file provides context for any AI assistant (Windsurf/Cascade) operating within **The Bridge** (Mission Control). It explains how jOY Events is structured, how the data flows, and the boundaries between local development and live deployment.
+## 1. Source of Truth
+- **Mission Control / System Docs**: Root of `the-bridge` (e.g., `SOUL.md`, `MEMORY.md`, `COMPASSION.md`).
+- **The Vacuum (Backend)**: `the-bridge/joy-events/` (Python scrapers + data harvesting).
+- **The Web App (Frontend)**: `the-bridge/joy-events-app/` (Next.js source code).
+- **Live Production**: `shaneHighPeek/joy-events-web` (External repo; mirrored from `joy-events-app/`).
 
-## 2. Repository Structure
-You are currently inside `the-bridge`. This is the central workspace.
+## 2. Boundaries & Restrictions
+### **DO NOT EDIT (OpenClaw / Klor Territory)**
+- `the-bridge/SOUL.md`, `MEMORY.md`, `COMPASSION.md`, `MODES.md`, `IDENTITY.md`.
+- `the-bridge/AGENTS.md`, `TOOLS.md`.
+- `the-bridge/memory/*.md`.
+These are core identity and operational files for the OpenClaw agent.
 
-### **Local Folders (The Factory)**
-- **`joy-events/`**: The "Vacuum" (Backend/Scrapers).
-  - Contains Python scrapers (BCC, GCCC, etc.) that harvest event data.
-  - **Goal**: Generate `events.json`.
-- **`joy-events-app/`**: The Frontend (Next.js/React).
-  - This is where you edit the UI, themes (SPORTS, MUSIC, CHILL), and API routes.
-  - **Data Source**: It reads from `src/data/events.json`.
+### **AUTO-GENERATED / OVERWRITTEN**
+- `the-bridge/joy-events-app/src/data/events.json`: OpenClaw overwrites this when syncing new harvests from the Vacuum.
+- `the-bridge/WINDSURF_CONTEXT.md`: OpenClaw maintains this for system orientation.
 
-### **External Repository (The Live Site)**
-- **`shaneHighPeek/joy-events-web`**: This is a standalone, lean repo.
-  - **DO NOT** edit this directly unless instructed. 
-  - Klor (the OpenClaw agent) automatically syncs `joy-events-app/` to this repo to trigger Vercel deployments at `joy-events-web.vercel.app`.
+## 3. Sync & Commit Workflow
+- **Commit Strategy**: Work and commit **ONLY** within `the-bridge`. 
+- **The Sync**: Klor (OpenClaw) manages the extraction of `joy-events-app/` and force-pushes it to the external `joy-events-web` repo to trigger Vercel. 
+- **Developer Rule**: Do not initialize separate git repositories inside `joy-events-app/` or `joy-events/`. Stay within the single `the-bridge` git tree.
 
-## 3. Data Flow (How it Interlinks)
-1. **Harvest**: Python scripts in `joy-events/` scrape data and save it to `joy-events/data/events.json`.
-2. **Sync**: The data is copied/imported into `joy-events-app/src/data/events.json`.
-3. **Display**: The Next.js API (`src/app/api/events/route.ts`) reads that JSON file and serves it to the frontend.
-4. **Deploy**: Klor pushes the `joy-events-app/` content to the `joy-events-web` GitHub repo, which Vercel builds and hosts.
+## 4. Conflict Protocol
+- **Klor Wins on Identity**: If an AI edits `SOUL.md` or `MEMORY.md`, Klor will revert and flag it.
+- **You Win on UI/UX**: Klor will not touch `joy-events-app/src/` (except for the data file) while you are in a "Play" session.
+- **Merge Strategy**: Manual merge via Klor. If you make heavy changes, tell Klor "Sync these changes live" and Klor will handle the mirror update.
 
-## 4. Boundaries & Constraints
-- **The Bridge Files**: Do not touch `SOUL.md`, `MEMORY.md`, or `COMPASSION.md` unless explicitly asked by the Captain. These are core identity files for the OpenClaw system.
-- **Environment Variables**: API keys (Ticketmaster, etc.) live in `.env` files which are git-ignored. Check with the Captain if they are missing.
-- **Vercel**: Vercel is connected only to the `joy-events-web` repo, not to `the-bridge`.
-
-## 5. Current Priorities for Windsurf
-- **UI/UX Refinement**: Improving the "Handset" aesthetic and event card layouts.
-- **Theme Logic**: Ensuring the vibe-switcher (SPORTS, MUSIC, CHILL) feels high-trust and premium.
-- **Mapping**: Ensuring event imagery correctly maps to the cards.
+## 5. Validation & Handoff
+- **Checklist before handoff to Klor**:
+  1. `npm run build` (inside `joy-events-app`) must pass.
+  2. No breaking changes to `src/app/api/events/route.ts` (this is the data bridge).
+  3. All new images must have high-trust fallbacks.
+- **Handover Command**: Tell Klor: *"UI changes are committed in The Bridge. Sync them to the live site."*
 
 ---
-**Last Updated**: 2026-02-28
+**Status**: Ready for Windsurf Operations.
 **Co-pilot**: Klor ⚡
